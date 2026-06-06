@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define lint long long unsigned
+#define slint long long
+#define slint long long
+#define rep(i,n) for(lint i=0; i<n; i++)
+#define rrep(b,i,n) for(lint i=b; i<n; i++)
+#define lep(it,a) for(auto it = a.begin(); it != a.end(); it++)
+#define rlep(it,a) for(auto it = a.rbegin(); it != a.rend(); it++)
+#define INF 100000
+
+int main (){
+  lint N;
+  cin >> N;
+  
+  vector<lint> A(N+1), B(N+1);
+  bool flg=true;
+  rrep(1, i, N+1){
+    cin >> A[i];
+  }
+  rrep(1, i, N+1){
+    cin >> B[i];
+    
+    if(A[B[i]]!=i){
+      flg=false;
+      break;
+    }
+  }
+  
+  if(flg){
+    cout << "Yes";
+  }else{
+    cout << "No";
+  }
+}
